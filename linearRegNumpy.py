@@ -1,27 +1,22 @@
-training_data = [1, 2, 3, 4, 5]
-target_data = [1, 2, 3, 4, 5]
+import numpy as np
+training_data = np.array([1, 2, 3, 4, 5])
+target_data = np.array([1, 2, 3, 4, 5])
 w = 0
 b = 0
 n = len(training_data)
 
 
-# why to count it?
 def get_mse(training_data, target_data, w, b):
-    total = 0.0
-    for i in range(n):
-        pred_i = w * training_data[i] + b
-        total += (pred_i - target_data[i]) ** 2
-    return total / n
+    pred = w * training_data + b
+    return np.mean((pred - target_data) ** 2)
 
 
 def get_gradients(training_data, target_data, w, b):
-    total_w = 0.0
-    total_b = 0.0
-    for i in range(n):
-        pred_i = w * training_data[i] + b
-        total_b += (pred_i - target_data[i])
-        total_w += (pred_i - target_data[i]) * training_data[i]
-    return [total_w / n, total_b / n]
+    pred = w * training_data + b
+    error = pred - target_data
+    total_w = np.dot(error, training_data) / n
+    total_b = np.mean(error)
+    return [total_w, total_b]
 
 
 def gradient_descent(gradients, learning_rate, w, b):
