@@ -5,6 +5,8 @@ import logging
 
 class AbsReg(ABC):
     def __init__(self, learning_rate=0.01, iterations=10000):
+        self.b = None
+        self.w = None
         self.logger = logging.getLogger(self.__class__.__name__)
         self.n = None
         self.learning_rate = learning_rate
@@ -47,8 +49,17 @@ class AbsReg(ABC):
 
         self.post_calc_callback()
 
+        self.w = w
+        self.b = b
 
     def gradient_descent(self, gradients, w, b):
         w += -self.learning_rate * gradients[0]
         b += -self.learning_rate * gradients[1]
         return w, b
+
+    @abstractmethod
+    def get_pred(self, training_data, w, b):
+        pass
+
+    def predict(self, training_data):
+        return self.get_pred(training_data, self.w, self.b)

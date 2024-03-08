@@ -17,3 +17,6 @@ class LinearRegPurePy(AbsReg):
             total_b += (pred_i - target_data[i])
             total_w += (pred_i - target_data[i]) * training_data[i]
         return [total_w / self.n, total_b / self.n]
+
+    def get_pred(self, training_data, w, b):
+        return w * training_data + b

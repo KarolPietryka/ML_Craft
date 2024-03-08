@@ -5,9 +5,6 @@ import numpy as np
 
 
 class NumPyReg(AbsReg):
-    @abstractmethod
-    def get_pred(self, training_data, w, b):
-        pass
 
     def get_mse(self, training_data, target_data, w, b):
         pred = self.get_pred(training_data, w, b)
