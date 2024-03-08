@@ -1,6 +1,6 @@
-from linear_reg.linear.LinearRegNumPy import LinearRegNumPy
+from reg.linear.LinearRegNumPy import LinearRegNumPy
 import numpy as np
-from linear_reg.linear.LinearRegPurePy import LinearRegPurePy
+from reg.linear.LinearRegPurePy import LinearRegPurePy
 import logging
 
 # Configure logging

@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import os
 
-from linear_reg.compare.CsvLinearRegNumPy import CsvLinearRegNumPy
-from linear_reg.compare.CsvLinearRegPurePy import CsvLinearRegPurePy
+from reg.compare.CsvLinearRegNumPy import CsvLinearRegNumPy
+from reg.compare.CsvLinearRegPurePy import CsvLinearRegPurePy
 
 logging.basicConfig(level=logging.DEBUG, format='%(message)s')
 

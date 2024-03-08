@@ -1,4 +1,4 @@
-from linear_reg.AbsReg import AbsReg
+from reg.AbsReg import AbsReg
 
 
 class LinearRegPurePy(AbsReg):

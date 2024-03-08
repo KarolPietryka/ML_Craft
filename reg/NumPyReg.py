@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from linear_reg.AbsReg import AbsReg
+from reg.AbsReg import AbsReg
 import numpy as np
 
 

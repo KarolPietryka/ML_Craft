@@ -1,4 +1,4 @@
-from linear_reg.NumPyReg import NumPyReg
+from reg.NumPyReg import NumPyReg
 import numpy as np
 
 

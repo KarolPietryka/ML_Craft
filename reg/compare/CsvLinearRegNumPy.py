@@ -1,10 +1,11 @@
-from linear_reg.linear.LinearRegPurePy import LinearRegPurePy
 import time
 import pandas as pd
 
-class CsvLinearRegPurePy(LinearRegPurePy):
+from reg.linear.LinearRegNumPy import LinearRegNumPy
+
+class CsvLinearRegNumPy(LinearRegNumPy):
     def milestone(self, i, mse, w, b):
-        super(LinearRegPurePy, self).milestone(i, mse, w, b)
+        super(CsvLinearRegNumPy, self).milestone(i, mse, w, b)
         self.data.append({'Iteration': i, 'MSE': mse, 'w': w, 'b': b, 'Total calc time': time.time() - self.start_time})
 
     def post_calc_callback(self):
