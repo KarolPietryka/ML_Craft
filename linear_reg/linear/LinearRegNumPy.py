@@ -1,15 +1,7 @@
-from linear_reg.AbsReg import AbsReg
-import numpy as np
+from linear_reg.NumPyReg import NumPyReg
 
 
-class LinearRegNumPy(AbsReg):
-    def get_mse(self, training_data, target_data, w, b):
-        pred = w * training_data + b
-        return np.mean((pred - target_data) ** 2)
+class LinearRegNumPy(NumPyReg):
+    def get_pred(self, training_data, w, b):
+        return w * training_data + b
 
-    def get_gradients(self, training_data, target_data, w, b):
-        pred = w * training_data + b
-        error = pred - target_data
-        total_w = np.dot(error, training_data) / self.n
-        total_b = np.mean(error)
-        return [total_w, total_b]
