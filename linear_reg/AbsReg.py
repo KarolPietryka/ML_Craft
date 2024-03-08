@@ -4,7 +4,7 @@ import pandas as pd
 import logging
 
 
-class AbsLinearReg(ABC):
+class AbsReg(ABC):
     def __init__(self, learning_rate=0.01, iterations=10000):
         self.logger = logging.getLogger(self.__class__.__name__)
         self.n = None

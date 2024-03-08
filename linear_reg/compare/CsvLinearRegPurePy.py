@@ -1,4 +1,4 @@
-from linear_reg.LinearRegPurePy import LinearRegPurePy
+from linear_reg.linear.LinearRegPurePy import LinearRegPurePy
 import time
 import pandas as pd
 

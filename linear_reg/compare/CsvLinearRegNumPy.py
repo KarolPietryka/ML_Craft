@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 
-from linear_reg.LinearRegNumPy import LinearRegNumPy
+from linear_reg.linear.LinearRegNumPy import LinearRegNumPy
 
 class CsvLinearRegNumPy(LinearRegNumPy):
     def milestone(self, i, mse, w, b):

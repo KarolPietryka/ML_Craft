@@ -1,7 +1,7 @@
-from linear_reg.AbstLinearReg import AbsLinearReg
+from linear_reg.AbsReg import AbsReg
 
 
-class LinearRegPurePy(AbsLinearReg):
+class LinearRegPurePy(AbsReg):
     def get_mse(self, training_data, target_data, w, b):
         total = 0.0
         for i in range(self.n):

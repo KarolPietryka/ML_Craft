@@ -1,8 +1,8 @@
-from linear_reg.AbstLinearReg import AbsLinearReg
+from linear_reg.AbsReg import AbsReg
 import numpy as np
 
 
-class LinearRegNumPy(AbsLinearReg):
+class LinearRegNumPy(AbsReg):
     def get_mse(self, training_data, target_data, w, b):
         pred = w * training_data + b
         return np.mean((pred - target_data) ** 2)
